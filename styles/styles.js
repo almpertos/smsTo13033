@@ -47,5 +47,14 @@ export const styles = StyleSheet.create({
     btn: {
         paddingVertical: 40,
         width: '60%'
+    },
+    infoScreen: {
+        flex: 1,
+        paddingHorizontal: 20,
+        fontSize: 20
+    },
+    infoTextStyle: {
+        fontSize: 16,
+        fontWeight: '600'
     }
 });

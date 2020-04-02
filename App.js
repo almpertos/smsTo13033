@@ -6,6 +6,7 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 
 import UserDataScreen from './Screens/UserDataScreen';
 import ReasonsScreen from './Screens/ReasonsScreen';
+import AppInfoScreen from './Screens/AppInfoScreen';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -37,6 +38,19 @@ export default class App extends Component {
     </Stack.Navigator>
   )
 
+  AppInfoScreen = () => (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="SMS Μετακίνησης"
+        component={AppInfoScreen}
+        options={{
+          headerTitleAlign: 'center',
+          headerTitleStyle: { color: 'skyblue', fontWeight: 'bold' }
+        }}
+      />
+    </Stack.Navigator>
+  )
+
   render() {
     return (
       <NavigationContainer>
@@ -47,8 +61,11 @@ export default class App extends Component {
               size = 30;
               if (route.name === 'Στοιχεία χρήστη') {
                 iconName = focused ? 'user' : 'user';
-              } else if (route.name === 'Λόγοι εξόδου') {
+              } else if (route.name === 'Λόγοι μετακίνησης') {
                 iconName = focused ? 'bars' : 'bars';
+              }
+              else if (route.name === 'Πληροφορίες') {
+                iconName = focused ? 'info-circle' : 'info-circle';
               }
               return <Icon name={iconName} size={size} color={color} />;
             },
@@ -59,7 +76,8 @@ export default class App extends Component {
           }}
         >
           <Tab.Screen name="Στοιχεία χρήστη" component={this.UserStackScreen} />
-          <Tab.Screen name="Λόγοι εξόδου" component={this.ReasonsStackScreen} />
+          <Tab.Screen name="Λόγοι μετακίνησης" component={this.ReasonsStackScreen} />
+          <Tab.Screen name="Πληροφορίες" component={this.AppInfoScreen} />
         </Tab.Navigator>
       </NavigationContainer>
     )

@@ -16,7 +16,7 @@ class UserDataScreen extends Component {
 
     changeScreen = () => {
         if (this.state.fullName && this.state.address !== '')
-            this.props.navigation.navigate('Λόγοι εξόδου')
+            this.props.navigation.navigate('Λόγοι μετακίνησης')
         else
             alert('Δεν έχετε συμπληρώσει τα πεδία')
     }
@@ -40,7 +40,7 @@ class UserDataScreen extends Component {
             const name = await AsyncStorage.getItem('name');
             const addr = await AsyncStorage.getItem('address');
             if (name && addr !== null)
-                this.props.navigation.navigate('Λόγοι εξόδου')
+                this.props.navigation.navigate('Λόγοι μετακίνησης')
 
             if (name && addr !== null) {
                 this.setState({ fullName: name });
