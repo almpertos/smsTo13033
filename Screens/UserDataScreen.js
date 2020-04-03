@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, TextInput, Button, AsyncStorage } from 'react-native';
 
 import { styles } from '../styles/styles';
+import colors from '../colors/colors';
 
 class UserDataScreen extends Component {
     constructor(props) {
@@ -83,12 +84,12 @@ class UserDataScreen extends Component {
                     <Button
                         title="ΕΠΑΝΑΦΟΡΑ"
                         onPress={this.removeData}
-                        color="tomato"
+                        color={colors.btnReset}
 
                     />
                     <Button
                         title="ΕΠΙΒΕΒΑΙΩΣΗ"
-                        color="#33bbff"
+                        color={colors.btn}
                         onPress={this.confirmButton}
                     />
                 </View>

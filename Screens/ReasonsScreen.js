@@ -4,6 +4,7 @@ import * as SMS from 'expo-sms';
 
 import { Reasons } from '../data/Reasons';
 import { styles } from '../styles/styles';
+import colors from '../colors/colors';
 
 const service = '13033';
 
@@ -61,7 +62,7 @@ class ReasonsScreen extends Component {
                 <View style={styles.btn}>
                     <Button
                         title="ΑΠΟΣΤΟΛΗ ΜΗΝΥΜΑΤΟΣ"
-                        color="#33bbff"
+                        color={colors.btn}
                         onPress={this.sendSMS}
                     />
                 </View>

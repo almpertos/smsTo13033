@@ -14,7 +14,7 @@
     "icon": "./assets/logo.png",
     "splash": {
       "image": "./assets/splash.png",
-      "backgroundColor": "#429d76"
+      "backgroundColor": "#51c397"
     },
     "updates": {
       "fallbackToCacheTimeout": 0

@@ -7,6 +7,7 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 import UserDataScreen from './Screens/UserDataScreen';
 import ReasonsScreen from './Screens/ReasonsScreen';
 import AppInfoScreen from './Screens/AppInfoScreen';
+import colors from './colors/colors';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -19,7 +20,7 @@ export default class App extends Component {
         component={UserDataScreen}
         options={{
           headerTitleAlign: 'center',
-          headerTitleStyle: { color: '#33bbff', fontWeight: 'bold' }
+          headerTitleStyle: { color: colors.primary, fontWeight: 'bold' }
         }}
       />
     </Stack.Navigator>
@@ -32,7 +33,7 @@ export default class App extends Component {
         component={ReasonsScreen}
         options={{
           headerTitleAlign: 'center',
-          headerTitleStyle: { color: 'skyblue', fontWeight: 'bold' }
+          headerTitleStyle: { color: colors.primary, fontWeight: 'bold' }
         }}
       />
     </Stack.Navigator>
@@ -45,7 +46,7 @@ export default class App extends Component {
         component={AppInfoScreen}
         options={{
           headerTitleAlign: 'center',
-          headerTitleStyle: { color: 'skyblue', fontWeight: 'bold' }
+          headerTitleStyle: { color: colors.primary, fontWeight: 'bold' }
         }}
       />
     </Stack.Navigator>
@@ -71,7 +72,7 @@ export default class App extends Component {
             },
           })}
           tabBarOptions={{
-            activeTintColor: '#33bbff',
+            activeTintColor: colors.primary,
             inactiveTintColor: 'gray',
           }}
         >
