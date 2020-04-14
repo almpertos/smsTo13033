@@ -42,7 +42,7 @@ export const styles = StyleSheet.create({
     },
     reasonsText: {
         fontSize: 14,
-        fontWeight: '700'
+        fontWeight: '700',
     },
     btn: {
         paddingVertical: 40,
@@ -56,5 +56,5 @@ export const styles = StyleSheet.create({
     infoTextStyle: {
         fontSize: 16,
         fontWeight: '600'
-    }
+    },
 });

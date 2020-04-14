@@ -1,5 +1,5 @@
 export default {
-    primary: "#33bbff",
-    btn: "skyblue",
-    btnReset: "tomato"
+    primary: "#1e85ae",
+    btn: "#1e85ae",
+    btnReset: "#ff9380"
 }

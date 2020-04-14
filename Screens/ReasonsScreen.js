@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, AsyncStorage, Button, TouchableOpacity, FlatList } from 'react-native'
+import { View, Text, AsyncStorage, Button, TouchableOpacity, FlatList } from 'react-native';
 import * as SMS from 'expo-sms';
 
 import { Reasons } from '../data/Reasons';
@@ -16,8 +16,16 @@ class ReasonsScreen extends Component {
     state = {
         fullName: '',
         address: '',
-        keySelector: ''
+        keySelector: '',
+        pressed: true
     }
+
+    // changeColor = () => {
+    //     if (this.state.pressed == true)
+    //         this.setState({ pressed: false })
+    //     else
+    //         this.setState({ pressed: true })
+    // }
 
     sendSMS = async () => {
         try {
@@ -42,8 +50,15 @@ class ReasonsScreen extends Component {
 
     renderData = (itemData) => {
         return (
-            <TouchableOpacity onPress={() => this.state.keySelector = itemData.item.key}>
-                <View style={styles.reasonsContainer}>
+            <TouchableOpacity onPress={() => {
+                this.ch
+                this.state.keySelector = itemData.item.key
+            }}>
+                <View style={
+                        this.state.pressed
+                            ? styles.reasonsContainer
+                            : styles.test
+                    }>
                     <Text style={styles.reasonsText}>
                         {itemData.item.message}
                     </Text>
