@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { ScrollView, Text, Linking } from 'react-native';
+import React, { Component } from "react";
+import { ScrollView, Text, Linking } from "react-native";
 
-import { styles } from '../styles/styles';
+import { styles } from "../styles/styles";
 const info = `
 Η εφαρμογή δημιουργήθηκε καθαρά για να διευκολύνει την αποστολή μηνύματος στο 13033.
 Δεν δημιουργήθηκε με σκοπό το κέρδος. Δεν είναι καμίας επίσημης υπηρεσίας ή φορέα.
@@ -15,35 +15,46 @@ const info = `
 
 Πριν αναχωρήσετε για τον προορισμό σας, βεβαιωθείτε ότι λάβατε μήνυμα επιβεβαίωσης από το 13033.
 
-Περισσότερες πληροφορίες σχετικά με τους τρόπους μετακίνησης και οδηγίες θα βρείτε στο`
+Περισσότερες πληροφορίες σχετικά με τους τρόπους μετακίνησης και οδηγίες θα βρείτε στο`;
 
 class AppInfoScreen extends Component {
-    render() {
-        return (
-            <ScrollView style={styles.infoScreen}>
-                <Text style={styles.infoTextStyle}>
-                    {info} <Text style={{ color: 'blue' }}
-                        onPress={() => Linking.openURL('https://forma.gov.gr/')}>
-                        forma.gov.gr
-                </Text>
-                </Text>
-                <Text></Text>
-                <Text style={styles.infoTextStyle}>
-                    Η εφαρμογή είναι ανοικτού κώδικά. Μπορείτε να τη βρείτε εδώ: <Text style={{ color: 'blue' }}
-                        onPress={() => Linking.openURL('https://github.com/almpertos/smsTo13033')}>
-                        github.com/almpertos/smsTo13033
-                </Text>
-                </Text>
-                <Text></Text>
-                <Text style={styles.infoTextStyle}>Προγραμματιστής εφαρμογής: <Text style={{ color: 'blue' }}
-                    onPress={() => Linking.openURL('https://www.linkedin.com/feed/')}>
-                    Κεσισεφίδης Αλμπέρτος
-                    </Text>
-                </Text>
-            </ScrollView>
-        )
-    }
+  render() {
+    return (
+      <ScrollView style={styles.infoScreen}>
+        <Text style={styles.infoTextStyle}>
+          {info}{" "}
+          <Text
+            style={{ color: "blue" }}
+            onPress={() => Linking.openURL("https://forma.gov.gr/")}
+          >
+            forma.gov.gr
+          </Text>
+        </Text>
+        <Text></Text>
+        <Text style={styles.infoTextStyle}>
+          Η εφαρμογή είναι ανοικτού κώδικά. Μπορείτε να τη βρείτε εδώ:{" "}
+          <Text
+            style={{ color: "blue" }}
+            onPress={() =>
+              Linking.openURL("https://github.com/almpertos/smsTo13033")
+            }
+          >
+            github.com/almpertos/smsTo13033
+          </Text>
+        </Text>
+        <Text></Text>
+        <Text style={styles.infoTextStyle}>
+          Προγραμματιστής εφαρμογής:{" "}
+          <Text
+            style={{ color: "blue" }}
+            onPress={() => Linking.openURL("https://www.linkedin.com/feed/")}
+          >
+            Κεσισεφίδης Αλμπέρτος
+          </Text>
+        </Text>
+      </ScrollView>
+    );
+  }
 }
 
 export default AppInfoScreen;
-
