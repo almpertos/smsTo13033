@@ -8,7 +8,7 @@ import {
   FlatList,
 } from "react-native";
 import * as SMS from "expo-sms";
-
+import Toast from "react-native-simple-toast";
 import { Reasons } from "../data/Reasons";
 import { styles } from "../styles/styles";
 import colors from "../colors/colors";
@@ -24,7 +24,6 @@ class ReasonsScreen extends Component {
     fullName: "",
     address: "",
     keySelector: "",
-    pressed: true,
   };
 
   sendSMS = async () => {
@@ -57,11 +56,10 @@ class ReasonsScreen extends Component {
         onPress={() => {
           this.ch;
           this.state.keySelector = itemData.item.key;
+          Toast.show(`Επιλογή ${this.state.keySelector}`);
         }}
       >
-        <View
-          style={this.state.pressed ? styles.reasonsContainer : styles.test}
-        >
+        <View style={styles.reasonsContainer}>
           <Text style={styles.reasonsText}>{itemData.item.message}</Text>
         </View>
       </TouchableOpacity>
