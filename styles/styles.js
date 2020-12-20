@@ -36,9 +36,9 @@ export const styles = StyleSheet.create({
     marginTop: 5,
     marginHorizontal: "5%",
     marginVertical: "1%",
-    borderRadius: 10,
-    backgroundColor: "#b2cde6",
-    padding: 23,
+    borderRadius: 20,
+    backgroundColor: "#8bb4da",
+    padding: 20,
   },
   reasonsText: {
     fontSize: 14,

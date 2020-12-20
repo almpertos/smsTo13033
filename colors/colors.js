@@ -1,5 +1,5 @@
 export default {
-  primary: "#1e85ae",
-  btn: "#1e85ae",
-  btnReset: "#ff9380",
+  primary: "#007acc",
+  btn: "#007acc",
+  btnReset: "#ffa899",
 };

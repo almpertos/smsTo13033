@@ -3,7 +3,7 @@
     "name": "SMS Μετακίνησης στο 13033",
     "slug": "smsTo13033",
     "privacy": "public",
-    "sdkVersion": "36.0.0",
+    "sdkVersion": "40.0.0",
     "platforms": [
       "android"
     ],
