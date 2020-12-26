@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { ScrollView, Text, Linking } from "react-native";
+import Snowflakes from "react-native-snowflakes";
 
 import { styles } from "../styles/styles";
 const info = `
@@ -21,6 +22,7 @@ class AppInfoScreen extends Component {
     render() {
         return (
             <ScrollView style={styles.infoScreen}>
+                <Snowflakes numberOfSnowflakes={30} sizeOfSnowflakes={40}/>
                 <Text style={styles.infoTextStyle}>
                     {info}{" "}
                     <Text

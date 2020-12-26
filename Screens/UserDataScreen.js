@@ -3,6 +3,7 @@ import { View, TextInput, Button, AsyncStorage } from "react-native";
 
 import { styles } from "../styles/styles";
 import colors from "../colors/colors";
+import Snowflakes from "react-native-snowflakes";
 
 class UserDataScreen extends Component {
     constructor(props) {
@@ -65,6 +66,7 @@ class UserDataScreen extends Component {
     render() {
         return (
             <View style={styles.screen}>
+                <Snowflakes numberOfSnowflakes={30} sizeOfSnowflakes={40} />
                 <View style={styles.userDataContainer}>
                     <TextInput
                         style={styles.userDataInput}

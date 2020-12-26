@@ -12,6 +12,7 @@ import Toast from "react-native-simple-toast";
 import { Reasons } from "../data/Reasons";
 import { styles } from "../styles/styles";
 import colors from "../colors/colors";
+import Snowflakes from "react-native-snowflakes";
 
 const service = "13033";
 
@@ -72,6 +73,7 @@ class ReasonsScreen extends Component {
         return (
             <View style={styles.screen}>
                 <FlatList data={Reasons} renderItem={this.renderData} />
+                <Snowflakes numberOfSnowflakes={30} sizeOfSnowflakes={40}/>
                 <View style={styles.btn}>
                     <Button
                         title="ΑΠΟΣΤΟΛΗ ΜΗΝΥΜΑΤΟΣ"
