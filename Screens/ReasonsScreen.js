@@ -1,18 +1,10 @@
 import React, { Component } from "react";
-import {
-    View,
-    Text,
-    AsyncStorage,
-    Button,
-    TouchableOpacity,
-    FlatList,
-} from "react-native";
+import { View, Text, AsyncStorage, FlatList } from "react-native";
 import * as SMS from "expo-sms";
-import Toast from "react-native-simple-toast";
 import { Reasons } from "../data/Reasons";
 import { styles } from "../styles/styles";
-import colors from "../colors/colors";
 import Snowflakes from "react-native-snowflakes";
+import { Root, Popup } from "popup-ui";
 
 const service = "13033";
 
@@ -53,37 +45,47 @@ class ReasonsScreen extends Component {
 
     renderData = (itemData) => {
         return (
-            <TouchableOpacity
-                onPress={() => {
-                    this.ch;
-                    this.state.keySelector = itemData.item.key;
-                    Toast.show(`Επιλογή ${this.state.keySelector}`);
-                }}
-            >
-                <View style={styles.reasonsContainer}>
+            <View style={styles.reasonsContainer}>
+                <Text
+                    onPress={() => {
+                        this.ch;
+                        this.state.keySelector = itemData.item.key;
+                        Popup.show({
+                            type: "Success",
+                            title: `Επιλέξατε το λόγο μετακίνησης ${this.state.keySelector}`,
+                            textBody: `${itemData.item.message.slice(6)}`,
+                            configButton: true,
+                            configButtonText: "Συνέχεια",
+                            cancelButton: true,
+                            cancelButtonText: "Ακύρωση",
+                            handleImage: this.state.keySelector.toString(),
+                            cancelCallback: () => Popup.hide(),
+                            configCallback: () => {
+                                Popup.hide(),
+                                    setTimeout(() => {
+                                        this.sendSMS();
+                                    }, 400);
+                            },
+                        });
+                    }}
+                >
                     <Text style={styles.reasonsText}>
                         {itemData.item.message}
                     </Text>
-                </View>
-            </TouchableOpacity>
+                </Text>
+            </View>
         );
     };
 
     render() {
         return (
-            <View style={styles.screen}>
-                <FlatList data={Reasons} renderItem={this.renderData} />
-                <Snowflakes numberOfSnowflakes={30} sizeOfSnowflakes={40}/>
-                <View style={styles.btn}>
-                    <Button
-                        title="ΑΠΟΣΤΟΛΗ ΜΗΝΥΜΑΤΟΣ"
-                        color={colors.btn}
-                        onPress={this.sendSMS}
-                    />
+            <Root>
+                <View>
+                    <FlatList data={Reasons} renderItem={this.renderData} />
+                    <Snowflakes numberOfSnowflakes={30} sizeOfSnowflakes={40} />
                 </View>
-            </View>
+            </Root>
         );
     }
 }
-
 export default ReasonsScreen;

@@ -14,6 +14,7 @@
     "@react-navigation/stack": "^5.12.8",
     "expo": "^40.0.0",
     "expo-sms": "^8.4.0",
+    "popup-ui": "^1.2.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-40.0.0.tar.gz",
