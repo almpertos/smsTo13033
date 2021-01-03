@@ -82,7 +82,6 @@ class ReasonsScreen extends Component {
             <Root>
                 <View>
                     <FlatList data={Reasons} renderItem={this.renderData} />
-                    <Snowflakes numberOfSnowflakes={20} sizeOfSnowflakes={30} />
                 </View>
             </Root>
         );

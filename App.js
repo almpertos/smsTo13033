@@ -16,7 +16,7 @@ export default class App extends Component {
     UserStackScreen = () => (
         <Stack.Navigator>
             <Stack.Screen
-                name="Καλές γιορτές"
+                name="SMS Μετακίνησης"
                 component={UserDataScreen}
                 options={{
                     headerTitleAlign: "center",
@@ -32,7 +32,7 @@ export default class App extends Component {
     ReasonsStackScreen = () => (
         <Stack.Navigator>
             <Stack.Screen
-                name="Καλές γιορτές"
+                name="SMS Μετακίνησης"
                 component={ReasonsScreen}
                 options={{
                     headerTitleAlign: "center",
