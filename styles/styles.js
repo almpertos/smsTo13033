@@ -38,7 +38,7 @@ export const styles = StyleSheet.create({
         marginVertical: "1%",
         borderRadius: 20,
         backgroundColor: "#8bb4da",
-        padding: 27,
+        padding: 30,
     },
     reasonsText: {
         fontSize: 14,

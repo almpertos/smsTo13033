@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { ScrollView, Text, Linking } from "react-native";
-import Snowflakes from "react-native-snowflakes";
 
 import { styles } from "../styles/styles";
 const info = `
@@ -21,7 +20,6 @@ class AppInfoScreen extends Component {
     render() {
         return (
             <ScrollView style={styles.infoScreen}>
-                <Snowflakes numberOfSnowflakes={20} sizeOfSnowflakes={30}/>
                 <Text style={styles.infoTextStyle}>
                     {info}{" "}
                     <Text
@@ -51,7 +49,7 @@ class AppInfoScreen extends Component {
                     <Text
                         style={{ color: "blue" }}
                         onPress={() =>
-                            Linking.openURL("https://www.linkedin.com/feed/")
+                            Linking.openURL("https://www.linkedin.com/in/almpertos-kesisefidis/")
                         }
                     >
                         Κεσισεφίδης Αλμπέρτος

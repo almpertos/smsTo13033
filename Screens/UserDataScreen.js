@@ -3,7 +3,6 @@ import { View, TextInput, Button, AsyncStorage } from "react-native";
 
 import { styles } from "../styles/styles";
 import colors from "../colors/colors";
-import Snowflakes from "react-native-snowflakes";
 
 class UserDataScreen extends Component {
     constructor(props) {
