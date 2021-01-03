@@ -4,8 +4,7 @@ import Snowflakes from "react-native-snowflakes";
 
 import { styles } from "../styles/styles";
 const info = `
-Η εφαρμογή δημιουργήθηκε καθαρά για να διευκολύνει την αποστολή μηνύματος στο 13033.
-Δεν δημιουργήθηκε με σκοπό το κέρδος. Δεν είναι καμίας επίσημης υπηρεσίας ή φορέα.
+Η εφαρμογή δημιουργήθηκε για να διευκολύνει την αποστολή μηνύματος στο 13033.
 
 Η εφαρμογή αποθηκεύει το ονοματεπώνυμό σας και τη διεύθυνση σας τοπικά στο κινητό σας.
 Δεν αποστέλλονται πουθενά τα προσωπικά σας δεδομένα.
@@ -22,7 +21,7 @@ class AppInfoScreen extends Component {
     render() {
         return (
             <ScrollView style={styles.infoScreen}>
-                <Snowflakes numberOfSnowflakes={30} sizeOfSnowflakes={40}/>
+                <Snowflakes numberOfSnowflakes={20} sizeOfSnowflakes={30}/>
                 <Text style={styles.infoTextStyle}>
                     {info}{" "}
                     <Text

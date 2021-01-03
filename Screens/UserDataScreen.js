@@ -66,7 +66,7 @@ class UserDataScreen extends Component {
     render() {
         return (
             <View style={styles.screen}>
-                <Snowflakes numberOfSnowflakes={30} sizeOfSnowflakes={40} />
+                <Snowflakes numberOfSnowflakes={20} sizeOfSnowflakes={30} />
                 <View style={styles.userDataContainer}>
                     <TextInput
                         style={styles.userDataInput}

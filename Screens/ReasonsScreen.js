@@ -64,7 +64,7 @@ class ReasonsScreen extends Component {
                                 Popup.hide(),
                                     setTimeout(() => {
                                         this.sendSMS();
-                                    }, 400);
+                                    }, 600);
                             },
                         });
                     }}
@@ -82,7 +82,7 @@ class ReasonsScreen extends Component {
             <Root>
                 <View>
                     <FlatList data={Reasons} renderItem={this.renderData} />
-                    <Snowflakes numberOfSnowflakes={30} sizeOfSnowflakes={40} />
+                    <Snowflakes numberOfSnowflakes={20} sizeOfSnowflakes={30} />
                 </View>
             </Root>
         );
